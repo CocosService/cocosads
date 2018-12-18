@@ -17,6 +17,7 @@ var cocosadsVue = Vue.extend({
         };
     },
     created() {
+        // 从传入的参数中读取对应的值，展示到界面中
         if (this.paramList) {
             this.appid = this.paramList.appid ? this.paramList.appid : "";
         }
@@ -36,12 +37,13 @@ var cocosadsVue = Vue.extend({
         handleSaveParamLogic: function () {
             // 保存参数之前一定要对必须参数做判断，确定必要参数没有漏填
             if (!this.appid) {
-                utils.printToCreatorConsole("error", "请在编辑器设置好 CocosAds-Test 的 APPID");
+                utils.printToCreatorConsole("info", "请在编辑器设置好 CocosAds-Test 的 APPID");
                 return;
             }
             var param = {};
             param.appid = this.appid;
             this.paramList = param;
+            // 将参数传到 Cocos Service 面板中，并通知面板保存传去的参数
             this.$emit("save-param", this.paramList);
             this.enableButton = false;
         }
