@@ -34,10 +34,13 @@ var cocosadsVue = Vue.extend({
         }
     },
     methods: {
+        utils_t: function (key, ...args) {
+            return utils.t(key, ...args);
+        },
         handleSaveParamLogic: function () {
             // 保存参数之前一定要对必须参数做判断，确定必要参数没有漏填
             if (!this.appid) {
-                utils.printToCreatorConsole("info", "请在编辑器设置好 CocosAds-Test 的 APPID");
+                utils.printToCreatorConsole("info", this.utils_t("cocosads.miss_param_tips"));
                 return;
             }
             var param = {};
