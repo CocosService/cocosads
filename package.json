@@ -4,14 +4,14 @@
     "author": "mx2913@qq.com",
     "upgrade": "./upgrade.js",
     "contents": {
-        "-item": {
+        "item": {
             "main": "./dist/item/item.js"
         },
         "detail": {
             "main": "./dist/detail/detail.js",
             "disables": []
         },
-        "-popup": {
+        "popup": {
             "main": "./dist/popup/popup.js",
             "title": "标题测试",
             "height": 300,
