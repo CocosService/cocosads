@@ -1,0 +1,51 @@
+{
+    "name": "service-cocosads",
+    "version": "2.0.0",
+    "author": "mx2913@qq.com",
+    "upgrade": "./upgrade.js",
+    "contents": {
+        "-item": {
+            "main": "./dist/item/item.js"
+        },
+        "detail": {
+            "main": "./dist/detail/detail.js",
+            "disables": []
+        },
+        "-popup": {
+            "main": "./dist/popup/popup.js",
+            "title": "标题测试",
+            "height": 300,
+            "width": 400
+        }
+    },
+    "builder": {
+        "main": "./dist/builder/builder.js",
+        "native": true
+    },
+    "scripts": {
+        "release": "cross-env NODE_ENV=production gulp publish"
+    },
+    "dependencies": {
+        "fs-extra": "^9.0.1",
+        "pinyin-match": "^1.1.7"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^9.0.2",
+        "@types/node": "^14.14.3",
+        "@types/request": "^2.48.5",
+        "@types/vue": "^2.0.0",
+        "@types/watch": "^1.0.1",
+        "cross-env": "^7.0.3",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-if": "^3.0.0",
+        "gulp-javascript-obfuscator": "^1.1.6",
+        "gulp-replace": "^1.0.0",
+        "gulp-shell": "^0.8.0",
+        "gulp-terser": "^2.0.1",
+        "gulp-typescript": "^6.0.0-alpha.1",
+        "gulp-watch": "^5.0.1",
+        "gulp-zip": "^5.0.2",
+        "typescript": "^4.0.5"
+    }
+}
