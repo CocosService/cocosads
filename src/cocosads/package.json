@@ -1,6 +1,7 @@
 {
-    "version": "1.0.0_2.2.5",
+    "version": "1.0.0_1.0.0",
     "author": "Cocos",
-    "email": "yangxin@anysdk.com",
-    "upgrade": "新增AnySDK服务集成"
+    "email": "yangxin@qq.com",
+    "upgrade": "新增 Cocos Ads 服务集成",
+    "upgrade_en": "New Cocos Ads service integration"
 }

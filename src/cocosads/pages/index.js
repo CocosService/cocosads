@@ -1,11 +1,25 @@
 "use strict";
-let fs = require("fs");
+let {
+    readFileSync
+} = require("fs");
+let {
+    join,
+    dirname,
+    basename
+} = require('path');
+
+let readFile = (...paths) => readFileSync(join(...paths), 'utf-8');
 let utils = Editor.require("packages://cocos-services/panel/utils/utils.js");
-var cocosadsVue = Vue.extend({
-    template: fs.readFileSync(Editor.remote.App.home + "/services/cocosads/pages/index.html", "utf-8"),
+let packageName = basename(dirname(__dirname));
+// 注册Vue组件，组件名由Service后台返回，不可随意命名
+Vue.component(`service-${packageName}`, Vue.extend({
+    template: readFile(__dirname, './index.html'),
     props: {
         // 从cocos service面板传过来的服务参数(若存在)
         params: {
+            type: Object
+        },
+        service: {
             type: Object
         }
     },
@@ -51,6 +65,4 @@ var cocosadsVue = Vue.extend({
             this.enableButton = false;
         }
     }
-});
-// 注册Vue组件，组件名由Service后台返回，不可随意命名
-Vue.component("service-cocosads", cocosadsVue);
+}));
