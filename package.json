@@ -1,6 +1,6 @@
 {
     "name": "service-cocosads",
-    "version": "2.0.0",
+    "version": "2.0.0_1.0.0",
     "author": "mx2913@qq.com",
     "upgrade": "./upgrade.js",
     "contents": {
@@ -26,8 +26,7 @@
         "release": "cross-env NODE_ENV=production gulp publish"
     },
     "dependencies": {
-        "fs-extra": "^9.0.1",
-        "pinyin-match": "^1.1.7"
+        "fs-extra": "^9.0.1"
     },
     "devDependencies": {
         "@types/fs-extra": "^9.0.2",
