@@ -1,7 +1,12 @@
-<div id="cocosads">
+<div id="analytics">
     <div class="service-detail-section-line section">参数配置</div>
     <ui-prop>
         <ui-label slot="label" value="AppID"></ui-label>
-        <div slot="content" style="flex: 1;"><ui-input style="width: 100%;"></ui-input></div>
+        <div slot="content" style="flex: 1;"><ui-input id="appid" disabled style="width: 100%;"></ui-input></div>
     </ui-prop>
+    <ui-prop>
+        <ui-label slot="label" value="Store"></ui-label>
+        <div slot="content" style="flex: 1;"><ui-input id="store" style="width: 100%;"></ui-input></div>
+    </ui-prop>
+    <div class="flex" style="text-align: right; margin-top: 10px;"> <ui-button id="btnSave">保存参数</ui-button></div>
 </div>

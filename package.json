@@ -1,31 +1,21 @@
 {
     "name": "service-cocosads",
-    "version": "2.0.0_1.0.0",
+    "version": "2.0.0_2.2.1",
     "author": "mx2913@qq.com",
     "upgrade": "./upgrade.js",
     "contents": {
-        "item": {
-            "main": "./dist/item/item.js"
-        },
         "detail": {
-            "main": "./dist/detail/detail.js",
-            "disables": []
-        },
-        "popup": {
-            "main": "./dist/popup/popup.js",
-            "title": "标题测试",
-            "height": 300,
-            "width": 400
+            "main": "./dist/detail/detail.js"
         }
     },
     "builder": {
-        "main": "./dist/builder/builder.js",
-        "native": true
+        "main": "./dist/builder/builder.js"
     },
     "scripts": {
         "release": "cross-env NODE_ENV=production gulp publish"
     },
     "dependencies": {
+        "editor-build-helper": "^0.1.1",
         "fs-extra": "^9.0.1"
     },
     "devDependencies": {
