@@ -1,4 +1,6 @@
-import { ParamType, ServiceConfigInfo } from "../../@types/service/ifs";
+import { ParamType, ServiceConfigInfo } from "editor-build-helper/@types/service/ifs";
+
+import "editor-build-helper/@types/service/utils";
 
 import ebh from 'editor-build-helper'
 import { copyFileSync, existsSync, mkdirsSync, unlinkSync } from "fs-extra";
